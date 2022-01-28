@@ -1,0 +1,14 @@
+{
+  "version": 2,
+  "dgSpecHash": "z2xLXX+hR/mxuUCpISgSftwSdYSUM9r9ATfWLu+Xdb8LooAAy5lmjKH6/KST5AQ76/0FrLIk8dCwdDFUCPCeFw==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\vlnote15\\Desktop\\Guilherme\\AplicativoFit\\AplicativoFit\\AplicativoFit\\AplicativoFit.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\vlnote15\\.nuget\\packages\\microsoft.netcore.platforms\\1.1.0\\microsoft.netcore.platforms.1.1.0.nupkg.sha512",
+    "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder\\netstandard.library\\2.0.3\\netstandard.library.2.0.3.nupkg.sha512",
+    "C:\\Users\\vlnote15\\.nuget\\packages\\system.numerics.vectors\\4.5.0\\system.numerics.vectors.4.5.0.nupkg.sha512",
+    "C:\\Users\\vlnote15\\.nuget\\packages\\xamarin.essentials\\1.6.1\\xamarin.essentials.1.6.1.nupkg.sha512",
+    "C:\\Users\\vlnote15\\.nuget\\packages\\xamarin.forms\\5.0.0.2012\\xamarin.forms.5.0.0.2012.nupkg.sha512"
+  ],
+  "logs": []
+}
