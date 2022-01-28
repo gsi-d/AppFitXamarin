@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\vlnote15\\Desktop\\Guilherme\\AplicativoFit\\AplicativoFit\\AplicativoFit\\AplicativoFit.csproj": {}
+    "C:\\Users\\vlnote15\\Desktop\\Guilherme\\AppFitXamarin\\AplicativoFit\\AplicativoFit\\AplicativoFit.csproj": {}
   },
   "projects": {
-    "C:\\Users\\vlnote15\\Desktop\\Guilherme\\AplicativoFit\\AplicativoFit\\AplicativoFit\\AplicativoFit.csproj": {
+    "C:\\Users\\vlnote15\\Desktop\\Guilherme\\AppFitXamarin\\AplicativoFit\\AplicativoFit\\AplicativoFit.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\vlnote15\\Desktop\\Guilherme\\AplicativoFit\\AplicativoFit\\AplicativoFit\\AplicativoFit.csproj",
+        "projectUniqueName": "C:\\Users\\vlnote15\\Desktop\\Guilherme\\AppFitXamarin\\AplicativoFit\\AplicativoFit\\AplicativoFit.csproj",
         "projectName": "AplicativoFit",
-        "projectPath": "C:\\Users\\vlnote15\\Desktop\\Guilherme\\AplicativoFit\\AplicativoFit\\AplicativoFit\\AplicativoFit.csproj",
+        "projectPath": "C:\\Users\\vlnote15\\Desktop\\Guilherme\\AppFitXamarin\\AplicativoFit\\AplicativoFit\\AplicativoFit.csproj",
         "packagesPath": "C:\\Users\\vlnote15\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\vlnote15\\Desktop\\Guilherme\\AplicativoFit\\AplicativoFit\\AplicativoFit\\obj\\",
+        "outputPath": "C:\\Users\\vlnote15\\Desktop\\Guilherme\\AppFitXamarin\\AplicativoFit\\AplicativoFit\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet\\",
@@ -58,6 +58,10 @@
             "Xamarin.Forms": {
               "target": "Package",
               "version": "[5.0.0.2012, )"
+            },
+            "sqlite-net-pcl": {
+              "target": "Package",
+              "version": "[1.8.116, )"
             }
           },
           "imports": [
