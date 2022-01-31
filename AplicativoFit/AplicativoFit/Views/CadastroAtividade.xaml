@@ -3,25 +3,25 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="AplicativoFit.Views.CadastroAtividade">
     <ContentPage.ToolbarItems>
-        <ToolbarItem Text="+"/>
-        <ToolbarItem Text="Salvar" IconImageSource="salvar"/>
+        <ToolbarItem Text="+" Command="{Binding NovaAtividade}"/>
+        <ToolbarItem Text="Salvar" IconImageSource="salvar" Command="{Binding SalvarAtividade}"/>
     </ContentPage.ToolbarItems>
     
     <ContentPage.Content>
         <StackLayout Padding="10">
-            <Label Text="Id"/>
+            <Label Text="{Binding Id}"/>
             
             <Label Text="Descrição:"/>
-            <Entry Placeholder="Como foi sua Atividade?"/>
+            <Entry Placeholder="Como foi sua Atividade?" Text="{Binding Descricao}"/>
 
             <Label Text="Data:"/>
-            <DatePicker Format="dd/MM/yyyy"/>
+            <DatePicker Format="dd/MM/yyyy" Date="{Binding Data}"/>
 
             <Label Text="Peso:"/>
-            <Entry Keyboard="Numeric" Placeholder="Quanto você estava pesando?"/>
+            <Entry Keyboard="Numeric" Placeholder="Quanto você estava pesando?" Text="{Binding Peso}"/>
 
             <Label Text="Observações:"/>
-            <Entry Placeholder="Algo para lembrar mais tarde?"/>
+            <Entry Placeholder="Algo para lembrar mais tarde?" Text="{Binding Observacoes}"/>
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>

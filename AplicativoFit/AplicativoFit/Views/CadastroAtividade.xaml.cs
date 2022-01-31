@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-
+using AplicativoFit.ViewModels;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
@@ -15,6 +15,17 @@ namespace AplicativoFit.Views
         public CadastroAtividade()
         {
             InitializeComponent();
+
+            BindingContext = new CadastroAtividadeViewModel();
+        }
+
+        protected override async void OnAppearing()
+        {
+            var vm = (CadastroAtividadeViewModel)BindingContext;
+            if (vm.Id == 0)
+            {
+                vm.NovaAtividade.Execute(null);
+            }
         }
     }
 }
