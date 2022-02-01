@@ -34,7 +34,7 @@ namespace AplicativoFit.Helpers
 
         public Task<List<Atividade>> Update(Atividade model)
         {
-            string sql = "UPDATE Atividade SET Descricao=?, Data=?, Peso=?, Descricao=? WHERE Id=?";
+            string sql = "UPDATE Atividade SET Descricao=?, Data=?, Peso=?, Observacoes=? WHERE Id=?";
 
             return _db.QueryAsync<Atividade>(sql,
                 model.Descricao,

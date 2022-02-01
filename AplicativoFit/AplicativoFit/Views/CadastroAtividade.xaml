@@ -22,9 +22,6 @@
 
             <Label Text="Observações:"/>
             <Entry Placeholder="Algo para lembrar mais tarde?" Text="{Binding Observacoes}"/>
-
-            <Label Text="entry personalizado"/>
-            <local:EntryRender Placeholder="Inserir Texto"></local:EntryRender>
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>
