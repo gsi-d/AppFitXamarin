@@ -81,49 +81,45 @@ namespace AplicativoFit.ViewModels
 
         public ICommand SalvarAtividade
         {
-            get => new Command( async() =>
-            {
-                try
-                {
-                    Atividade model = new Atividade()
-                    {
-                        Descricao = this.Descricao,
-                        Data = this.Data,
-                        Peso = this.Peso,
-                        Observacoes = this.Observacoes                        
-                    };
+            get => new Command(async () =>
+           {
+               try
+               {
+                   Atividade model = new Atividade()
+                   {
+                       Descricao = this.Descricao,
+                       Data = this.Data,
+                       Peso = this.Peso,
+                       Observacoes = this.Observacoes
+                   };
 
-                    if(this.Id == 0)
-                    {
-                        if ((model.Descricao != null) && (model.Data != null) && (model.Peso != null) && (model.Observacoes != null))
-                        {
-                            await App.Database.Insert(model);
-                            await Application.Current.MainPage.DisplayAlert("Beleza!", "Salvo!", "OK");
-                            await Shell.Current.GoToAsync("//MinhasAtividades");
-                        }
-                        else
-                        {
-                            await Application.Current.MainPage.DisplayAlert("Ops!", "Verifique se todos os campos estão corretos!", "OK");
-                        }                        
-                    }
-                    else
-                    {
-                        model.Id = this.id;
-                        await App.Database.Update(model);
-                        await Application.Current.MainPage.DisplayAlert("Beleza!", "Salvo!", "OK");
-                    }                   
-                    
-                }
-                catch (Exception ex)
-                {
-                    await Application.Current.MainPage.DisplayAlert("Ops!", ex.Message, "OK");
-                }
-                    
+                   if (this.Id == 0)
+                   {
+                       if ((model.Descricao != null) && (model.Data != null) && (model.Peso != null) && (model.Observacoes != null))
+                       {
+                           await App.Database.Insert(model);
+                           await Application.Current.MainPage.DisplayAlert("Beleza!", "Salvo!", "OK");
+                           await Shell.Current.GoToAsync("//MinhasAtividades");
+                       }
+                       else
+                       {
+                           await Application.Current.MainPage.DisplayAlert("Ops!", "Verifique se todos os campos estão corretos!", "OK");
 
-                
-            });
+                       }
+                   }
+                   else
+                   {
+                       model.Id = this.id;
+                       await App.Database.Update(model);
+                       await Application.Current.MainPage.DisplayAlert("Beleza!", "Salvo!", "OK");
+                   }
+
+               }
+               catch (Exception ex)
+               {
+                   await Application.Current.MainPage.DisplayAlert("Ops!", ex.Message, "OK");
+               }
+           });
         }
-
-        
     }
 }
