@@ -1,10 +1,12 @@
 ﻿using AplicativoFit.Models;
+using CurvedEntry;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Text;
 using System.Windows.Input;
 using Xamarin.Forms;
+
 
 namespace AplicativoFit.ViewModels
 {
@@ -17,6 +19,8 @@ namespace AplicativoFit.ViewModels
         int id;
         DateTime data;
         double? peso;
+
+        CustomEntry cEntry = new CustomEntry();
 
         public string PegarIdDaNavegacao
         {
@@ -114,7 +118,7 @@ namespace AplicativoFit.ViewModels
                        else
                        {
                            await Application.Current.MainPage.DisplayAlert("Ops!", "Verifique se todos os campos estão corretos!", "OK");
-
+                           cEntry.BorderColor = Color.Red;
                        }
                    }
                    else

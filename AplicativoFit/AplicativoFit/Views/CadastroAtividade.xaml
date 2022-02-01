@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
-             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" xmlns:local="clr-namespace:AplicativoFit.Renderers"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" xmlns:local="clr-namespace:CurvedEntry"
              x:Class="AplicativoFit.Views.CadastroAtividade">
     <ContentPage.ToolbarItems>
         <ToolbarItem Text="+" Command="{Binding NovaAtividade}"/>
@@ -22,6 +22,18 @@
 
             <Label Text="Observações:"/>
             <Entry Placeholder="Algo para lembrar mais tarde?" Text="{Binding Observacoes}"/>
+
+            <!--<local:CustomEntry
+                                CornerRadius="18"
+                                IsCurvedCornersEnabled="True"
+                                BorderColor="{Binding BorderColor}"    
+                                HorizontalTextAlignment="Start"
+                                FontSize="17"
+                                HeightRequest="40"
+                                Placeholder="Custom Entry"
+                                TextColor="Black"
+                                FontAttributes="Bold"
+                                WidthRequest="100"/>-->
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>
