@@ -8,6 +8,7 @@ using Xamarin.Forms;
 
 namespace AplicativoFit.ViewModels
 {
+    [QueryProperty("PegarIdDaNavegacao", "parametro_id")]
     class CadastroAtividadeViewModel : INotifyPropertyChanged
     {
         public event PropertyChangedEventHandler PropertyChanged;
@@ -17,6 +18,15 @@ namespace AplicativoFit.ViewModels
         DateTime data;
         double? peso;
 
+        public string PegarIdDaNavegacao
+        {
+            set
+            {
+                int id_parametro = Convert.ToInt32(Uri.UnescapeDataString(value));
+
+                VerAtividade.Execute(id_parametro);
+            }
+        }
         public string Descricao
         {
             get => descricao;
@@ -120,6 +130,26 @@ namespace AplicativoFit.ViewModels
                    await Application.Current.MainPage.DisplayAlert("Ops!", ex.Message, "OK");
                }
            });
+        }
+
+        public ICommand VerAtividade
+        {
+            get => new Command<int>(async (int id) =>
+            {
+                try
+                {
+                    Atividade model = await App.Database.GetById(id);
+                    this.id = model.Id;
+                    this.Descricao = model.Descricao;
+                    this.Peso = model.Peso;
+                    this.Data = model.Data;
+                    this.Observacoes = model.Observacoes;
+                }
+                catch (Exception ex)
+                {
+                    await Application.Current.MainPage.DisplayAlert("Ops!", ex.Message, "OK");
+                }
+            });
         }
     }
 }

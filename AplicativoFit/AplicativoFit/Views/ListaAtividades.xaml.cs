@@ -1,4 +1,5 @@
-﻿using System;
+﻿using AplicativoFit.ViewModels;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -14,7 +15,14 @@ namespace AplicativoFit.Views
     {
         public ListaAtividades()
         {
+            BindingContext = new ListaAtividadesViewModel();
             InitializeComponent();
+        }
+
+        protected override async void OnAppearing()
+        {
+            var vm = (ListaAtividadesViewModel)BindingContext;
+            vm.AtualizarLista.Execute(null);  
         }
     }
 }
